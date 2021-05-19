@@ -1,6 +1,6 @@
 import Chart from './Chart';
 
-const SectionChartCases = ({ info }) => {
+const SectionChartCases = ({ info, size }) => {
     const arrayKey = Object.keys(info)
     const arrayValues = Object.values(info)
     const informationCovid = arrayValues.map((element, index, array) => {
@@ -11,7 +11,7 @@ const SectionChartCases = ({ info }) => {
 
     return(
         <article style={{display: 'flex', justifyContent: 'center'}}>
-        <Chart data={informationCovid} dataKey={arrayKey}/>
+        <Chart data={informationCovid} dataKey={arrayKey} state={size} />
         </article>
     )
 }

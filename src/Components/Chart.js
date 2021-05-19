@@ -1,8 +1,8 @@
 import {Bar} from 'react-chartjs-2';
 
-const Chart = ({data, dataKey}) => {
+const Chart = ({data, dataKey, state}) => {
     return(
-        <article style={{width: '85%'}}>
+        <article style={{width: state > 650 ? '85%' : '90%'}}>
         <Bar
             data={{
                 labels: dataKey,
@@ -30,8 +30,12 @@ const Chart = ({data, dataKey}) => {
                  },
                  scales: {
                     yAxes: [{
-                        ticks: {
-                            beginAtZero:true
+                        ticks: state > 650 ? {
+                            beginAtZero:true,
+                            maxTicksLimit: 10,
+                        } : {
+                            maxTicksLimit: 5,
+                            autoSkip: true,
                         }
                     }],
                     xAxes: [{
@@ -39,8 +43,7 @@ const Chart = ({data, dataKey}) => {
                             display:false
                         },
                         ticks: {
-                            maxTicksLimit: 15,
-                            autoSkip: true,
+                            display: false
                         }
                     }],
                 }
