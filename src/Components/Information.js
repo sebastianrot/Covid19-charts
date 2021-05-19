@@ -12,8 +12,8 @@ const Information = () => {
             <br />
             <span style={{fontSize: '17px', fontWeight: '600'}}>PL</span>
             <section>
-            Witam, mam na imię Sebastian i stworzyłem tą stronę żeby pokazać statystyki pandemii koronawirusa. Dane są dostarczne przez disease.sh. Wszelki niezgodności danych proszę kontaktować do nich. 
-            Jeśli w statystykach ilość jest równa zero oznacz to ,że dane nie były prawidłowe. 
+            Witam, mam na imię Sebastian i stworzyłem tą stronę żeby pokazać statystyki pandemii koronawirusa. Dane są dostarczne przez disease.sh. Wszelkie niezgodności danych proszę kontaktować do nich. 
+            Jeśli w statystykach ilość jest równa zero oznacz to, że dane nie były prawidłowe. 
             </section>
         </main>
     )
